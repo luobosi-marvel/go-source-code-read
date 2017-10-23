@@ -5,6 +5,7 @@
 // Package bufio implements buffered I/O. It wraps an io.Reader or io.Writer
 // object, creating another object (Reader or Writer) that also implements
 // the interface but provides buffering and some help for textual I/O.
+// 这里包括了 go 的缓冲区操作
 package bufio
 
 import (
@@ -64,6 +65,7 @@ func NewReader(rd io.Reader) *Reader {
 
 // Reset discards any buffered data, resets all state, and switches
 // the buffered reader to read from r.
+// 重置
 func (b *Reader) Reset(r io.Reader) {
 	b.reset(b.buf, r)
 }
